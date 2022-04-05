@@ -169,9 +169,9 @@ class Custom implements CustomInterface
         try {
             $cartModel = $this->cartModel->create();
 
-            $this->cartModel->setSku($sku);
-            $this->cartModel->setQuoteId($quoteId);
-            $this->cartModel->setCreated($created);
+            $cartModel->setSku($sku);
+            $cartModel->setQuoteId($quoteId);
+            $cartModel->setCreated($created);
 
             if ($customerId !== null) {
                 $cartModel->setCustomerId($customerId);
