@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="customer_cart_table" resource="default" engine="innodb" comment="Comment Here">
+
+        <column xsi:type="int" name="id" padding="7" unsigned="true" nullable="false" identity="true" comment="ID" />
+        <column xsi:type="varchar" name="sku" nullable="false" length="64" comment="Sku" />
+        <column xsi:type="int" name="customer_id" nullable="true"  comment="Customer_ID" />
+        <column xsi:type="int" name="quote_id" nullable="false"  comment="Quote_ID" />
+        <column xsi:type="timestamp" name="created" default="CURRENT_TIMESTAMP" comment="Created_at" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id" />
+        </constraint>
+    </table>
+</schema>
